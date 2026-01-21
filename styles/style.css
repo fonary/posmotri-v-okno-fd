@@ -9,15 +9,15 @@ html {
 }
 
 .page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  padding-inline: 30px;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  inline-size: 1140px;
+  inline-size: 1200px;
   block-size: 100%;
 }
 
@@ -64,7 +64,31 @@ ol {
 }
 
 .button {
-  padding: 6px 74px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: normal;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content {
@@ -73,6 +97,10 @@ ol {
   align-items: end;
   gap: 30px;
   inline-size: 100%;
+}
+
+.result {
+  padding-block-end: 3px;
 }
 
 .result__video-container {
@@ -88,17 +116,20 @@ ol {
 }
 
 .search-form {
+  block-size: 54px;
   display: flex;
   align-items: start;
   gap: 40px;
 }
 
 .search-form__fieldset {
+  display: grid;
+  gap: 5px;
   border: none;
 }
 
 .search-form__fieldset:first-child {
-  flex: 1 0 auto;
+  inline-size: 225px;
 }
 
 .search-form__fieldset-title {
@@ -115,6 +146,7 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__label:hover:has(input[type="checkbox"]) {
@@ -128,9 +160,10 @@ ol {
   color: inherit;
   font-family: inherit;
   font-size: 18px;
-  background-color: #1b1919;
+  background-color: transparent;
   inline-size: 100%;
   appearance: none;
+  padding: 0;
 }
 
 .search-form__textfield:focus,
@@ -139,13 +172,17 @@ ol {
 }
 
 .search-form__textfield::placeholder {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  letter-spacing: normal;
+  line-height: 100%;
   color: rgb(255 255 255 / 0.7);
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  width: fit-content;
+  inline-size: fit-content;
 }
 
 .search-form__pseudo-checkbox {
@@ -169,16 +206,21 @@ ol {
 }
 
 .search-form__submit-button {
+  min-inline-size: 194px;
+  block-size: 34px;
   align-self: end;
 }
 
 .content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: start;
   inline-size: 399px;
-  block-size: 100%;
+  block-size: 534px;
 }
 
 .title {
-  margin-block-end: 26px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   line-height: 94%;
@@ -191,10 +233,11 @@ ol {
 
 .content__list-container {
   display: flex;
+  padding-inline: 3px;
   flex-direction: column;
   gap: 30px;
   overflow: auto;
-  block-size: 298px;
+  min-block-size: 298px;
 }
 
 .content__list {
@@ -216,6 +259,9 @@ ol {
 }
 
 .content__video-card-description-container {
+  display: grid;
+  gap: 5px;
+  padding-top: 2px;
   flex-grow: 1;
   min-width: 0;
 }
@@ -240,8 +286,16 @@ ol {
   overflow: hidden;
   color: #d9d9d9;
   line-height: 90%;
+  font-weight: 400;
   text-overflow: ellipsis;
   -webkit-line-clamp: 5;
   line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
+.more-button {
+  inline-size: 100%;
+  min-block-size: 34px;
+  margin-block-end: 5px;
+}
+to do делаем кнопки
