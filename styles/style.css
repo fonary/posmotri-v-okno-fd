@@ -100,7 +100,7 @@ ol {
 }
 
 .result {
-  padding-block-end: 3px;
+  padding-block-end: 4px;
 }
 
 .result__video-container {
@@ -112,6 +112,7 @@ ol {
 
 .result__video {
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -120,13 +121,11 @@ ol {
   display: flex;
   align-items: start;
   gap: 40px;
-  block-size: 54px;
 }
 
 .search-form__fieldset {
-  display: grid;
-  gap: 5px;
   border: none;
+  padding-block-end: 3px;
 }
 
 .search-form__fieldset:first-child {
@@ -134,6 +133,7 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-block-end: 5px;
   font-weight: normal;
   font-size: 18px;
   line-height: normal;
@@ -213,15 +213,13 @@ ol {
 }
 
 .content__details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-  inline-size: 399px;
-  block-size: 534px;
+  padding-block-end: 4px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .title {
+  margin-block-end: 23px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   line-height: 94%;
@@ -238,14 +236,16 @@ ol {
   flex-direction: column;
   gap: 30px;
   padding-inline: 3px;
+  padding-block-end: 2px;
   overflow: auto;
-  min-block-size: 298px;
+  block-size: 298px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  padding-block-start: 2px;
 }
 
 .content__card-link {
@@ -256,7 +256,7 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link_current {
@@ -312,13 +312,12 @@ ol {
   font-weight: 400;
   line-height: 90%;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 5;
-  line-clamp: 5;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
 }
 
 .more-button {
-  margin-block-end: 5px;
   inline-size: 100%;
   min-block-size: 34px;
 }
