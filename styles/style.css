@@ -239,6 +239,7 @@ ol {
   padding-block-end: 2px;
   overflow: auto;
   block-size: 298px;
+  inline-size: 399px;
 }
 
 .content__list {
